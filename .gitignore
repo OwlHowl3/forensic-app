@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# R session files
+.Rhistory
+.RData
+.Rproj.user/
+
+# renv library (dependencies are restored from renv.lock)
+renv/library/
+renv/staging/
+renv/python/
+renv/sandbox/
+
+# Large source data (not needed for app deployment)
+*.RData
+
+# Shiny logs
+*.log
