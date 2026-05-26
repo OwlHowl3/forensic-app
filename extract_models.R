@@ -27,15 +27,39 @@ predictors <- var_info |>
   filter(role == "predictor") |>
   select(variable, type, source)
 
+# Human-readable labels + descriptions for the CRETA sternum dataset
+# (all measurements in millimetres; see Aristotle Univ. of Thessaloniki CRETA collection)
+var_info_creta <- list(
+  ml    = list(label = "Manubrium length",
+               description = "Superior–inferior length of the manubrium, suprasternal notch to manubriosternal joint (mm)"),
+  sbl   = list(label = "Sternum body length",
+               description = "Length of the sternum body, manubriosternal joint to xiphisternal junction (mm)"),
+  mw    = list(label = "Manubrium width",
+               description = "Maximum mediolateral width of the manubrium (mm)"),
+  sbws1 = list(label = "Sternum body width — 1st sternebra",
+               description = "Mediolateral width of the sternum body at the 1st sternebra (mm)"),
+  sbws2 = list(label = "Sternum body width — 2nd sternebra",
+               description = "Mediolateral width of the sternum body at the 2nd sternebra (mm)"),
+  sbws3 = list(label = "Sternum body width — 3rd sternebra",
+               description = "Mediolateral width of the sternum body at the 3rd sternebra (mm)"),
+  sbt   = list(label = "Sternum body thickness",
+               description = "Anteroposterior thickness of the sternum body (mm)")
+)
+
 # Get predictor summary from the original training data
 predictor_meta <- list()
 for (v in predictors$variable) {
   col <- train_tbl[[v]]
+  extra <- var_info_creta[[v]]
+  label <- if (!is.null(extra$label)) extra$label else v
+  description <- if (!is.null(extra$description)) extra$description else NULL
+
   if (is.factor(col) || is.character(col)) {
     predictor_meta[[v]] <- list(
       type = "factor",
       levels = levels(as.factor(col)),
-      label = v
+      label = label,
+      description = description
     )
   } else {
     predictor_meta[[v]] <- list(
@@ -43,7 +67,8 @@ for (v in predictors$variable) {
       min = min(col, na.rm = TRUE),
       max = max(col, na.rm = TRUE),
       mean = mean(col, na.rm = TRUE),
-      label = v
+      label = label,
+      description = description
     )
   }
 }
