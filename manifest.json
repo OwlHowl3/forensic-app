@@ -651,6 +651,40 @@
         "RemoteSha": "1.0.13"
       }
     },
+    "bsicons": {
+      "Source": "CRAN",
+      "Repository": "https://cloud.r-project.org",
+      "description": {
+        "Package": "bsicons",
+        "Title": "Easily Work with 'Bootstrap' Icons",
+        "Version": "0.1.2",
+        "Authors@R": "c(\n    person(\"Carson\", \"Sievert\", , \"carson@posit.co\", role = c(\"cre\", \"aut\"),\n           comment = c(ORCID = \"0000-0002-4958-2844\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")),\n    person(\"Mark\", \"Otto\", role = \"cph\",\n           comment = \"Bootstrap icons maintainer\")\n  )",
+        "Description": "Easily use 'Bootstrap' icons inside 'Shiny' apps and 'R\n    Markdown' documents. More generally, icons can be inserted in any\n    'htmltools' document through inline 'SVG'.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/rstudio/bsicons",
+        "BugReports": "https://github.com/rstudio/bsicons/issues",
+        "Depends": "R (>= 2.10)",
+        "Imports": "cli, htmltools, rlang, utils",
+        "Suggests": "bslib, processx, testthat, webshot2, withr",
+        "Config/testthat/edition": "3",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.3",
+        "NeedsCompilation": "no",
+        "Packaged": "2023-11-03 23:29:00 UTC; cpsievert",
+        "Author": "Carson Sievert [cre, aut] (<https://orcid.org/0000-0002-4958-2844>),\n  Posit Software, PBC [cph, fnd],\n  Mark Otto [cph] (Bootstrap icons maintainer)",
+        "Maintainer": "Carson Sievert <carson@posit.co>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-11-04 00:30:05 UTC",
+        "Built": "R 4.5.0; ; 2025-04-01 07:48:51 UTC; unix",
+        "RemoteType": "standard",
+        "RemoteRef": "bsicons",
+        "RemotePkgRef": "bsicons",
+        "RemoteRepos": "https://cloud.r-project.org",
+        "RemoteReposName": "CRAN",
+        "RemotePkgPlatform": "aarch64-apple-darwin20",
+        "RemoteSha": "0.1.2"
+      }
+    },
     "bslib": {
       "Source": "CRAN",
       "Repository": "https://cloud.r-project.org",
@@ -4896,22 +4930,22 @@
   },
   "files": {
     ".Rprofile": {
-      "checksum": "7501c97b5b02ca225f27058cb53cab57"
+      "checksum": "143dad0683ef3656f2210f764c32b9aa"
     },
     "app.R": {
-      "checksum": "e653645921f8b5ad8cdd12e797c6b971"
+      "checksum": "380a097230e09ebedc7e94ec3aa2bd1f"
     },
     "creta_4_ml_classification_2026-05.R": {
       "checksum": "94978d7d263b4c2f39dd9e34db1e6009"
     },
     "extract_models.R": {
-      "checksum": "57ca9214febc6c3b0acd413b18157f7b"
+      "checksum": "e56b9f64b3e64bdba9cda9a1fb74758c"
     },
     "ml_classification_2026-04-24.RData": {
       "checksum": "42e69db2a3df56f19fbf4b839a3cefec"
     },
     "models/creta/meta.rds": {
-      "checksum": "755738539fc7b83393571f8d5fd2e071"
+      "checksum": "d9af59dccc652965734afe1a8f9cb414"
     },
     "models/creta/wf_lda_fda.rds": {
       "checksum": "eda4f41f51c3cc740671464fa7ee3d1b"
@@ -4944,7 +4978,7 @@
       "checksum": "413fdc9d95c897df49fa30adbb4040be"
     },
     "renv.lock": {
-      "checksum": "153282d591536c567a87027d486849b0"
+      "checksum": "a87708d80ca722dadd78aa79802c7baa"
     }
   },
   "users": null
